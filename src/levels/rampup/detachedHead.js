@@ -4,12 +4,14 @@ exports.level = {
   "startTree": "{\"branches\":{\"master\":{\"target\":\"C2\",\"id\":\"master\"},\"bugFix\":{\"target\":\"C4\",\"id\":\"bugFix\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"},\"C2\":{\"parents\":[\"C1\"],\"id\":\"C2\"},\"C3\":{\"parents\":[\"C1\"],\"id\":\"C3\"},\"C4\":{\"parents\":[\"C3\"],\"id\":\"C4\"}},\"HEAD\":{\"target\":\"master\",\"id\":\"HEAD\"}}",
   "name": {
     "en_US": "Detach yo' HEAD",
+    "ja": "HEADを分離",
     "zh_CN": "分离HEAD",
     "zh_TW": "分離HEAD",
     "de_DE": "Den Kopf abtrennen"
   },
   "hint": {
     "en_US": "Use the label (hash) on the commit for help!",
+    "ja": "コミットのラベル（ハッシュ）を使おう！",
     "de_DE": "Benutze den Bezeichner (den Hash) des Commits.",
     "zh_TW": "使用 commit 上的標籤（hash）來幫助你！",
     "zh_CN": "使用提交记录上的标签(hash)来求助！"
@@ -88,6 +90,84 @@ exports.level = {
               "To complete this level, let's detach HEAD from `bugFix` and attach it to the commit instead.",
               "",
               "Specify this commit by its hash. The hash for each commit is displayed on the circle that represents the commit."
+            ]
+          }
+        }
+      ]
+    },
+    "ja": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Gitの中を動き回る",
+              "",
+              "Gitのより高度な機能に進む前に、あなたのプロジェクトのコミットツリーの中を移動するいろいろな方法を理解することが重要です。",
+              "",
+              "動き回ることに慣れれば、その他のgitコマンドのパワーも増大します！",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## HEAD",
+              "",
+              "まず\"HEAD\"について説明する必要があります。HEADは現在チェックアウト中のコミットに対する、記号的な名前です。HEADは基本的には、あなたがその上で作業してコミットするものです。 ",
+              "",
+              "HEADは常に、ワークツリーに反映されている最新のコミットを指します。ワークツリーに変更を加えるほとんどのgitコマンドは、HEADを変更することから始まります。",
+              "",
+              "通常、HEADは（bugFixのような）ブランチ名を指します。コミットすると、bugFixの状態が変更され、その変更はHEADを通して見えます。"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "実行される様子を見てみましょう。コミット前後のHEADのの様子が明らかになります。"
+            ],
+            "afterMarkdowns": [
+              "ほら! HEADは私たちの`master`ブランチの下にずっと隠れています。"
+            ],
+            "command": "git checkout C1; git checkout master; git commit; git checkout C2",
+            "beforeCommand": ""
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "### HEADを分離する",
+              "",
+              "HEADを分離することは、単に、HEADをブランチの代わりにコミットに結合することを意味します。これがコマンド実行前の様子です。",
+              "",
+              "HEAD -> master -> C1",
+              ""
+            ],
+            "afterMarkdowns": [
+              "実行後はこうなります。",
+              "",
+              "HEAD -> C1"
+            ],
+            "command": "git checkout C1",
+            "beforeCommand": ""
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "このレベルを終了するために、`bugFix`からHEADを分離して、代わりにそれをコミットに結合してみましょう。",
+              "",
+              "このコミットはハッシュで指定してください。各コミットのハッシュは、コミットを表す丸の中に表示されています。"
             ]
           }
         }
