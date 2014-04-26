@@ -643,17 +643,20 @@ exports.strings = {
   ///////////////////////////////////////////////////////////////////////////
   'show-goal-button': {
     '__desc__': 'button label to show goal',
-    'en_US': 'Show Goal'
+    'en_US': 'Show Goal',
+    'ja': 'ゴールを表示する'
   },
   ///////////////////////////////////////////////////////////////////////////
   'hide-goal-button': {
     '__desc__': 'button label to hide goal',
-    'en_US': 'Hide Goal'
+    'en_US': 'Hide Goal',
+    'ja': 'ゴールを隠す'
   },
   ///////////////////////////////////////////////////////////////////////////
   'goal-to-reach': {
     '__desc__': 'title of window that shoes the goal tree to reach',
     'en_US': 'Goal To Reach',
+    'ja': 'ゴール',
     'de_DE': 'Ziel',
     'zh_CN': '目标',
     'zh_TW': '目標',
@@ -669,6 +672,7 @@ exports.strings = {
   'hide-goal': {
     '__desc__': 'the helper message for the window that shows the goal tree',
     'en_US': 'You can hide this window with "hide goal"',
+    'ja': 'このウィンドウは"ゴールを隠す"ボタンで隠すことができます',
     'de_DE': 'Du kannst diese Meldung mit "hide goal" ausblenden',
     'zh_CN': '你可以通过命令 "hide goal" 关闭这个窗口',
     'zh_TW': '你可以通過命令 "hide goal" 關閉這個窗口',
@@ -729,4 +733,3 @@ exports.strings = {
     'fr_FR': 'Ce message n\'a pas encore été traduit dans votre langue :( Venez sur Github aider à la traduction !'
   }
 };
-
