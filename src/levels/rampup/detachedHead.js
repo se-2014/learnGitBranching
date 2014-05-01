@@ -132,10 +132,10 @@ exports.level = {
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "実行される様子を見てみましょう。コミット前後のHEADのの様子が明らかになります。"
+              "実行される様子を見てみなはれ。コミット前後のHEADのの様子がわかるやろ。"
             ],
             "afterMarkdowns": [
-              "ほら! HEADは私たちの`master`ブランチの下にずっと隠れています。"
+              "どや! HEADは`master`ブランチの下にずっと隠れっぱなしや。"
             ],
             "command": "git checkout C1; git checkout master; git commit; git checkout C2",
             "beforeCommand": ""
